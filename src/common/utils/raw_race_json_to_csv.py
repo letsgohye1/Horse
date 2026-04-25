@@ -3,7 +3,7 @@ import pandas as pd
 from pathlib import Path
 
 
-def process_json_files(start_number, end_number):
+def process_raw_race_json_files(start_number, end_number):
     """
     현재 실행 중인 소스 파일과 동일한 디렉토리에 위치한 연속된 번호의 JSON 파일들을 읽어,
     경주 데이터(item)를 추출하고 'rcDate(경주 일자)'의 연도별로 분류하여 CSV 파일로 저장합니다.
@@ -86,4 +86,4 @@ def process_json_files(start_number, end_number):
 if __name__ == "__main__":
     # 불러올 파일의 시작 번호와 끝 번호 설정
     # 예: 1.json ~ 10.json을 읽으려면 (1, 10)
-    process_json_files(1, 15)
+    process_raw_race_json_files(1, 15)
