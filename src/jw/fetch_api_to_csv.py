@@ -86,7 +86,7 @@
 # def asd():
 #     df = pd.read_csv("./data_raw/raw_race_2023_to_2025.csv", encoding="utf-8-sig")
 
-#     hrno_list = df["hrno"].dropna().astype(str).str.zfill(7).unique()[3000:3500]
+#     hrno_list = df["hrNo"].dropna().astype(str).str.zfill(7).unique()[:500]
 
 #     print(f"총 요청 hrno: {len(hrno_list)}")
 
@@ -94,7 +94,7 @@
 
 #     result_df = pd.DataFrame(results)
 
-#     result_df.to_csv("horse_info_7.csv", index=False, encoding="utf-8-sig")
+#     result_df.to_csv("horse_info_1.csv", index=False, encoding="utf-8-sig")
 
 #     print(f"완료: {len(result_df)} rows 저장됨")
 
