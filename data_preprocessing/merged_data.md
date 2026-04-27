@@ -86,3 +86,23 @@ test_rank: float
 
 rank: float
 // 최종 결과 랭크 (모델 타겟 또는 핵심 순위 값)
+
+---
+
+✅ horse_info.csv 와 hrno로 merge
+
+---
+
+✅ 불필요한 컬럼 삭제
+rundayth 경주일 순번
+bldlnRegDt 혈통등록일
+bredgRegDt 번식 등록일
+hrnmGrtDt 등록갱신일
+rchrRegDt 등록일
+orcpyDt 소유권취득일
+prodNm 생산자
+jkName 기수 이름
+prtrName 조교사 이름
+hrName 경주마 이름
+
+---
