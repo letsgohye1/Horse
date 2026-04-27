@@ -1,4 +1,4 @@
-원본: raw_race_2023_to_2025.csv 에서
+원본: raw_race_2023_to_20260426.csv 에서
 
 아래 항목 결측치를 가진 row를 제거한 데이터셋
 prow 10
@@ -27,6 +27,6 @@ rcVtdusu 121
 track 98
 
 🚨 남은 결측치 항목
-diffTot 3270
-rcAge 492
-rcTime 743
+diffTot 3137
+rcAge 535
+rcTime 607
