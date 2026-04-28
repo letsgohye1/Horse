@@ -107,77 +107,98 @@ hrName 경주마 이름
 
 ---
 
-✅ 불필요한 컬럼 삭제 (너무 복잡함)
-확정배당률(단승식)
-rcP1Odd: float
-//확정배당율(단승식)
-
-확정배당금액(단승식)
-rcP1Sale: float
-// 확정배당금액(단승식)(단위:원)
-
-확정배당률(연승식)
-rcP2Odd: float
-// 확정배당율(연승식)
-
-확정배당금액(연승식)
-rcP2Sale: float
-// 확정배당금액(연승식)(단위:원)
-
-확정배당률(복승식)
-rcP3Odd: float
-// 확정배당율(복승식)
-
-확정배당금액(복승식)
-rcP3Sale: float
-// 복승식 배당금액 (원)
-
-확정배당률(쌍승식)
-rcP4Odd: float
-// 확정배당률(쌍승식)
-
-확정배당금액(쌍승식)
-rcP4Sale: float
-// 확정배당금액(쌍승식)(단위:원)
-
-확정배당률(복연승식)
-rcP5Odd: float
-// 확정배당률(복연승식)
-
-확정배당금액(복연승식)
-rcP5Sale: float
-// 확정배당금액(복연승식)(단위:원)
-
-확정배당률(삼복승식)
-rcP6Odd: float
-// 확정배당율(삼복승식)
-
-확정배당금액(삼복승식)
-rcP6Sale: float
-// 삼복승식 배당금액 (원)
-
-확정배당률(삼쌍승식)
-rcP8Odd: float
-// 확정배당율(삼쌍승식)
-
-확정배당금액(삼쌍승식)
-rcP8Sale: float
-// 확정배당금액(삼쌍승식)(단위:원)
-
----
-
-✅ 컬럼 한글화 -> merged_data_kr.csv 로 저장
-
----
-
-✅ 포맷 정리
-출생일, 경주일자 -> yyyy-MM-dd 포맷으로 변경
+✅ 불필요한 컬럼 삭제
+hrsBodyChticTxt        # 체형 특징
+hrsEtcPntsBrandShaTxt  # 추가 특징
+hrsHeadChticTxt        # 머리 특징
+hrsNeckChticTxt        # 목 특징
+passport               # 여권 번호
+ppseNm                 # 용도
+studbook               # 스터드북 상태
+korHrnm                # 한국 이름
+horseCtcolNm           # 털색
+etcChticTxt            # 기타 특징
+imphrEngHrnm           # 영문 이름
+fdtRegDt               # 출생 정보
+hrno_request           # 요청 ID
+microNo                # 마이크로칩 번호
+ihrno                  # 내부 ID
+indcCtryNm             # 국가
+rchrRegCnclDt          # 등록 취소일
+status                 # 상태
+spcsNm                 # 종
+bldlnRegDt             # 혈통 등록일
+bredgRegDt             # 번식 등록일
+hrnmGrtDt              # 갱신일
+rchrRegDt              # 등록일
+orcpyDt                # 소유권 취득일
+prodNm                 # 생산자
+hrsBodyChticTxt        # 몸통
 
 ---
 
 ✅ 불필요한 컬럼 삭제
-모마명 컬럼 삭제
-말 개체수 대비 모마수가 적어 큰 의미가 없음
+rcP1Odd                # 확정배당율(단승식)
+rcP1Sale               # 확정배당금액(단승식)
+rcP2Odd                # 확정배당율(연승식)
+rcP2Sale               # 확정배당금액(연승식)
+rcP3Odd                # 확정배당율(복승식)
+rcP3Sale               # 확정배당금액(복승식)
+rcP4Odd                # 확정배당율(쌍승식)
+rcP4Sale               # 확정배당금액(쌍승식)
+rcP5Odd                # 확정배당율(복연승식)
+rcP5Sale               # 확정배당금액(복연승식)
+rcP6Odd                # 확정배당율(삼복승식)
+rcP6Sale               # 확정배당금액(삼복승식)
+rcP8Odd                # 확정배당율(삼쌍승식)
+rcP8Sale               # 확정배당금액(삼쌍승식)
+
+---
+
+✅ 컬럼 한글화
+"divide": "분할경주여부"
+"hrName": "마명"
+"hrno": "마번"
+"jkNo": "기수번호"
+"prtr": "조교사번호"
+"rcBudam": "부담구분"
+"rcChul": "출전번호"
+"rcCode": "대상경주명"
+"rcDate": "경주일자"
+"rcDist": "경주거리"
+"rcGrade": "경주등급"
+"rcHrnew": "출전마구분"
+"rcNo": "경주번호"
+"rcNrace": "야간경마여부"
+"rcOrd": "순위"
+"rcP1Odd": "확정배당율(단승식)"
+"rcP1Sale": "확정배당금액(단승식)"
+"rcP2Odd": "확정배당율(연승식)"
+"rcP2Sale": "확정배당금액(연승식)"
+"rcP3Odd": "확정배당율(복승식)"
+"rcP3Sale": "확정배당금액(복승식)"
+"rcP4Odd": "확정배당율(쌍승식)"
+"rcP4Sale": "확정배당금액(쌍승식)"
+"rcP5Odd": "확정배당율(복연승식)"
+"rcP5Sale": "확정배당금액(복연승식)"
+"rcP6Odd": "확정배당율(삼복승식)"
+"rcP6Sale": "확정배당금액(삼복승식)"
+"rcP8Odd": "확정배당율(삼쌍승식)"
+"rcP8Sale": "확정배당금액(삼쌍승식)"
+"rcPlansu": "편성두수"
+"rcRank": "마필등급"
+"rcTime": "경주기록"
+"rcVtdusu": "출주두수"
+"track": "경주로상태"
+"weath": "날씨"
+"wgHr": "마체중"
+"damHrnm": "모마명"
+"foalgDt": "출생일"
+"gndrNm": "성별"
+"owrNm": "소유자명"
+"pctyNm": "생산국"
+"sireHrnm": "부마명"
+"sitlNm": "소재지"
 
 ---
 
@@ -200,3 +221,6 @@ rcP8Sale: float
 ✅ 파생변수 추가
 df["순위점수(정규화_1등: 1 꼴등: 0)"] = 1 - (df["순위"] - 1) / (df["출주두수"] - 1)
 순위점수 = 1 - {(순위 - 1) ÷ (출주두수 - 1)}
+
+---
+
