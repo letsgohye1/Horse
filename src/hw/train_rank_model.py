@@ -220,7 +220,7 @@ def tune_lightgbm(
 ) -> tuple[Pipeline, dict[str, Any], dict[str, Any]]:
     candidates = [
         {
-            "n_estimators": 300,
+            "n_estimators": 10,
             "learning_rate": 0.05,
             "num_leaves": 31,
             "min_child_samples": 20,
@@ -230,7 +230,7 @@ def tune_lightgbm(
             "reg_lambda": 0.0,
         },
         {
-            "n_estimators": 500,
+            "n_estimators": 25,
             "learning_rate": 0.04,
             "num_leaves": 63,
             "min_child_samples": 15,
@@ -240,7 +240,7 @@ def tune_lightgbm(
             "reg_lambda": 0.3,
         },
         {
-            "n_estimators": 700,
+            "n_estimators": 50,
             "learning_rate": 0.03,
             "num_leaves": 63,
             "min_child_samples": 25,
@@ -250,7 +250,7 @@ def tune_lightgbm(
             "reg_lambda": 0.3,
         },
         {
-            "n_estimators": 450,
+            "n_estimators": 70,
             "learning_rate": 0.05,
             "num_leaves": 47,
             "min_child_samples": 30,
