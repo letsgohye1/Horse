@@ -108,50 +108,50 @@ hrName 경주마 이름
 ---
 
 ✅ 불필요한 컬럼 삭제
-hrsBodyChticTxt        # 체형 특징
-hrsEtcPntsBrandShaTxt  # 추가 특징
-hrsHeadChticTxt        # 머리 특징
-hrsNeckChticTxt        # 목 특징
-passport               # 여권 번호
-ppseNm                 # 용도
-studbook               # 스터드북 상태
-korHrnm                # 한국 이름
-horseCtcolNm           # 털색
-etcChticTxt            # 기타 특징
-imphrEngHrnm           # 영문 이름
-fdtRegDt               # 출생 정보
-hrno_request           # 요청 ID
-microNo                # 마이크로칩 번호
-ihrno                  # 내부 ID
-indcCtryNm             # 국가
-rchrRegCnclDt          # 등록 취소일
-status                 # 상태
-spcsNm                 # 종
-bldlnRegDt             # 혈통 등록일
-bredgRegDt             # 번식 등록일
-hrnmGrtDt              # 갱신일
-rchrRegDt              # 등록일
-orcpyDt                # 소유권 취득일
-prodNm                 # 생산자
-hrsBodyChticTxt        # 몸통
+hrsBodyChticTxt # 체형 특징
+hrsEtcPntsBrandShaTxt # 추가 특징
+hrsHeadChticTxt # 머리 특징
+hrsNeckChticTxt # 목 특징
+passport # 여권 번호
+ppseNm # 용도
+studbook # 스터드북 상태
+korHrnm # 한국 이름
+horseCtcolNm # 털색
+etcChticTxt # 기타 특징
+imphrEngHrnm # 영문 이름
+fdtRegDt # 출생 정보
+hrno_request # 요청 ID
+microNo # 마이크로칩 번호
+ihrno # 내부 ID
+indcCtryNm # 국가
+rchrRegCnclDt # 등록 취소일
+status # 상태
+spcsNm # 종
+bldlnRegDt # 혈통 등록일
+bredgRegDt # 번식 등록일
+hrnmGrtDt # 갱신일
+rchrRegDt # 등록일
+orcpyDt # 소유권 취득일
+prodNm # 생산자
+hrsBodyChticTxt # 몸통
 
 ---
 
 ✅ 불필요한 컬럼 삭제
-rcP1Odd                # 확정배당율(단승식)
-rcP1Sale               # 확정배당금액(단승식)
-rcP2Odd                # 확정배당율(연승식)
-rcP2Sale               # 확정배당금액(연승식)
-rcP3Odd                # 확정배당율(복승식)
-rcP3Sale               # 확정배당금액(복승식)
-rcP4Odd                # 확정배당율(쌍승식)
-rcP4Sale               # 확정배당금액(쌍승식)
-rcP5Odd                # 확정배당율(복연승식)
-rcP5Sale               # 확정배당금액(복연승식)
-rcP6Odd                # 확정배당율(삼복승식)
-rcP6Sale               # 확정배당금액(삼복승식)
-rcP8Odd                # 확정배당율(삼쌍승식)
-rcP8Sale               # 확정배당금액(삼쌍승식)
+rcP1Odd # 확정배당율(단승식)
+rcP1Sale # 확정배당금액(단승식)
+rcP2Odd # 확정배당율(연승식)
+rcP2Sale # 확정배당금액(연승식)
+rcP3Odd # 확정배당율(복승식)
+rcP3Sale # 확정배당금액(복승식)
+rcP4Odd # 확정배당율(쌍승식)
+rcP4Sale # 확정배당금액(쌍승식)
+rcP5Odd # 확정배당율(복연승식)
+rcP5Sale # 확정배당금액(복연승식)
+rcP6Odd # 확정배당율(삼복승식)
+rcP6Sale # 확정배당금액(삼복승식)
+rcP8Odd # 확정배당율(삼쌍승식)
+rcP8Sale # 확정배당금액(삼쌍승식)
 
 ---
 
@@ -224,3 +224,7 @@ df["순위점수(정규화_1등: 1 꼴등: 0)"] = 1 - (df["순위"] - 1) / (df["
 
 ---
 
+✅
+순위 컬럼 제거
+시속 = 경주거리\*3.6 / 경주기록 // 컬럼 통합 후, 원본 경주거리, 경주기록 삭제
+순위점수 -> 출주두수\_대비\_상대순위점수 // 컬럼명 구체적으로 변경
