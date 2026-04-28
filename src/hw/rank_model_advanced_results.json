@@ -1,0 +1,162 @@
+{
+  "data_path": "C:\\Users\\Admin\\Desktop\\hhh\\Horse\\data_preprocessing\\merged_data_kr_Nan.csv",
+  "rows": 15460,
+  "columns": 28,
+  "feature_counts": {
+    "history_features": 66,
+    "advanced_context_features": 36
+  },
+  "split_rows": {
+    "train": 12111,
+    "valid": 1587,
+    "test": 1762
+  },
+  "split_rule": {
+    "train_before": "2026-01-01",
+    "validation_period": "2026 first half of race dates",
+    "test_period": "2026 second half of race dates"
+  },
+  "feature_notes": {
+    "target": "normalized_rank_score",
+    "dropped_for_leakage": [
+      "race_time",
+      "rank",
+      "score"
+    ],
+    "recent_trend_examples": [
+      "horse_score_lag_1",
+      "horse_score_mean_last_3",
+      "horse_rank_mean_last_5",
+      "horse_score_trend_1_vs_3"
+    ],
+    "distance_grade_examples": [
+      "horse_distance_prev_score_mean",
+      "horse_distance_prev_top3_rate",
+      "horse_grade_ctx_prev_score_mean",
+      "horse_grade_ctx_last_rank"
+    ],
+    "combo_examples": [
+      "horse_jockey_combo_prev_count",
+      "horse_jockey_combo_prev_score_mean",
+      "horse_jockey_combo_prev_win_rate",
+      "horse_jockey_combo_last_score"
+    ]
+  },
+  "validation_metrics": {
+    "ridge_baseline_advanced": {
+      "model": "ridge_baseline_advanced",
+      "mae": 0.25040720455238363,
+      "rmse": 0.2967499986566288,
+      "r2": 0.09595211974527107,
+      "winner_accuracy": 0.29518072289156627,
+      "winner_in_top_3_rate": 0.6385542168674698,
+      "ndcg_at_3": 0.7345233107081957
+    },
+    "best_lightgbm_advanced": {
+      "model": "lightgbm_candidate_1",
+      "mae": 0.243929152697016,
+      "rmse": 0.28912491364263504,
+      "r2": 0.14181481487340708,
+      "winner_accuracy": 0.27710843373493976,
+      "winner_in_top_3_rate": 0.6746987951807228,
+      "ndcg_at_3": 0.7337908482505977,
+      "params": {
+        "n_estimators": 300,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "min_child_samples": 20,
+        "subsample": 0.9,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.0,
+        "reg_lambda": 0.0
+      }
+    }
+  },
+  "selected_lightgbm_params": {
+    "n_estimators": 300,
+    "learning_rate": 0.05,
+    "num_leaves": 31,
+    "min_child_samples": 20,
+    "subsample": 0.9,
+    "colsample_bytree": 0.8,
+    "reg_alpha": 0.0,
+    "reg_lambda": 0.0
+  },
+  "test_metrics": {
+    "model": "lightgbm_advanced_final",
+    "mae": 0.23664802845051183,
+    "rmse": 0.2823757102048813,
+    "r2": 0.18920853292471207,
+    "winner_accuracy": 0.2543352601156069,
+    "winner_in_top_3_rate": 0.5780346820809249,
+    "ndcg_at_3": 0.7584047452993823
+  },
+  "top_15_feature_importance": [
+    {
+      "feature": "num__jockey_prev_weight_mean",
+      "importance": 242
+    },
+    {
+      "feature": "num__age_days",
+      "importance": 239
+    },
+    {
+      "feature": "num__마체중",
+      "importance": 238
+    },
+    {
+      "feature": "num__trainer_prev_weight_mean",
+      "importance": 206
+    },
+    {
+      "feature": "num__trainer_prev_count",
+      "importance": 199
+    },
+    {
+      "feature": "num__horse_prev_weight_mean",
+      "importance": 192
+    },
+    {
+      "feature": "num__trainer_prev_win_rate",
+      "importance": 183
+    },
+    {
+      "feature": "num__마번",
+      "importance": 183
+    },
+    {
+      "feature": "num__jockey_prev_rank_mean",
+      "importance": 180
+    },
+    {
+      "feature": "num__jockey_prev_score_mean",
+      "importance": 179
+    },
+    {
+      "feature": "num__jockey_prev_top3_rate",
+      "importance": 177
+    },
+    {
+      "feature": "num__trainer_prev_top3_rate",
+      "importance": 174
+    },
+    {
+      "feature": "num__jockey_prev_count",
+      "importance": 171
+    },
+    {
+      "feature": "num__jockey_last_score",
+      "importance": 169
+    },
+    {
+      "feature": "num__jockey_prev_win_rate",
+      "importance": 165
+    }
+  ],
+  "artifacts": {
+    "model": "C:\\Users\\Admin\\Desktop\\hhh\\Horse\\src\\hw\\rank_model_advanced_lightgbm.joblib",
+    "predictions": "C:\\Users\\Admin\\Desktop\\hhh\\Horse\\src\\hw\\rank_model_advanced_test_predictions.csv",
+    "feature_importance": "C:\\Users\\Admin\\Desktop\\hhh\\Horse\\src\\hw\\rank_model_advanced_feature_importance.csv",
+    "results": "C:\\Users\\Admin\\Desktop\\hhh\\Horse\\src\\hw\\rank_model_advanced_results.json"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "time_split_70_15_15": {
+    "description": "Chronological split over all dates: 70% train, 15% validation, 15% test",
+    "baseline": {
+      "mae": 0.2521,
+      "rmse": 0.2971,
+      "r2": 0.0949,
+      "winner_accuracy": 0.2819,
+      "winner_in_top_3_rate": 0.5752,
+      "ndcg_at_3": 0.7260
+    },
+    "history_features": {
+      "mae": 0.2431,
+      "rmse": 0.2886,
+      "r2": 0.1455,
+      "winner_accuracy": 0.2895,
+      "winner_in_top_3_rate": 0.6229,
+      "ndcg_at_3": 0.7505
+    },
+    "advanced_features": {
+      "mae": 0.2415,
+      "rmse": 0.2868,
+      "r2": 0.1567,
+      "winner_accuracy": 0.2781,
+      "winner_in_top_3_rate": 0.6457,
+      "ndcg_at_3": 0.7534
+    }
+  },
+  "holdout_2026": {
+    "description": "Train on dates before 2026-01-01, validate on first half of 2026 race dates, test on second half of 2026 race dates",
+    "baseline": {
+      "mae": 0.24652029040749454,
+      "rmse": 0.29130274727367783,
+      "r2": 0.1371334012333033,
+      "winner_accuracy": 0.2254335260115607,
+      "winner_in_top_3_rate": 0.5433526011560693,
+      "ndcg_at_3": 0.7438831077379308
+    },
+    "history_features": {
+      "mae": 0.23919235313907397,
+      "rmse": 0.2863600433172997,
+      "r2": 0.16616650658741594,
+      "winner_accuracy": 0.23121387283236994,
+      "winner_in_top_3_rate": 0.5895953757225434,
+      "ndcg_at_3": 0.7571953217671716
+    },
+    "advanced_features": {
+      "mae": 0.23664802845051183,
+      "rmse": 0.2823757102048813,
+      "r2": 0.18920853292471207,
+      "winner_accuracy": 0.2543352601156069,
+      "winner_in_top_3_rate": 0.5780346820809249,
+      "ndcg_at_3": 0.7584047452993823
+    }
+  }
+}

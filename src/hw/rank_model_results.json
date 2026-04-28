@@ -1,0 +1,90 @@
+{
+  "data_path": "C:\\Users\\Admin\\Desktop\\hhh\\Horse\\data_preprocessing\\merged_data_kr_Nan.csv",
+  "rows": 15460,
+  "columns": 28,
+  "split_rows": {
+    "train": 12111,
+    "valid": 1587,
+    "test": 1762
+  },
+  "split_rule": {
+    "train_before": "2026-01-01",
+    "validation_period": "2026 first half of race dates",
+    "test_period": "2026 second half of race dates"
+  },
+  "feature_notes": {
+    "target": "순위점수",
+    "rank_reference": "순위",
+    "dropped_for_leakage": [
+      "경주기록",
+      "순위",
+      "순위점수"
+    ],
+    "date_features_added": [
+      "말나이_일",
+      "말나이_년",
+      "경주연도",
+      "경주월",
+      "경주요일"
+    ]
+  },
+  "pdf_driven_choice": {
+    "lecture_1": "회귀 문제로 보고 MAE/RMSE/R2를 기본 평가로 사용",
+    "lecture_2": "분류 지표는 직접 타깃과 맞지 않아 보조 해석만 적용",
+    "lecture_3": "앙상블/부스팅과 검증 분할을 활용해 LightGBM을 주력 모델로 선택",
+    "lecture_4": "비지도/차원축소는 변수 수가 작고 해석성이 중요해 이번 버전에서는 제외"
+  },
+  "validation_metrics": {
+    "ridge_baseline": {
+      "model": "ridge_baseline",
+      "mae": 0.26444290214871663,
+      "rmse": 0.31020369371750994,
+      "r2": 0.01212064263537338,
+      "winner_accuracy": 0.2469879518072289,
+      "winner_in_top_3_rate": 0.5,
+      "ndcg_at_3": 0.672420985344188
+    },
+    "best_lightgbm": {
+      "model": "lightgbm_candidate_1",
+      "mae": 0.2516431191302503,
+      "rmse": 0.2962568690060338,
+      "r2": 0.09895425891017973,
+      "winner_accuracy": 0.2469879518072289,
+      "winner_in_top_3_rate": 0.572289156626506,
+      "ndcg_at_3": 0.7208352452548925,
+      "params": {
+        "n_estimators": 300,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "min_child_samples": 20,
+        "subsample": 0.9,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.0,
+        "reg_lambda": 0.0
+      }
+    }
+  },
+  "selected_lightgbm_params": {
+    "n_estimators": 300,
+    "learning_rate": 0.05,
+    "num_leaves": 31,
+    "min_child_samples": 20,
+    "subsample": 0.9,
+    "colsample_bytree": 0.8,
+    "reg_alpha": 0.0,
+    "reg_lambda": 0.0
+  },
+  "test_metrics": {
+    "model": "lightgbm_final",
+    "mae": 0.24652029040749454,
+    "rmse": 0.29130274727367783,
+    "r2": 0.1371334012333033,
+    "winner_accuracy": 0.2254335260115607,
+    "winner_in_top_3_rate": 0.5433526011560693,
+    "ndcg_at_3": 0.7438831077379308
+  },
+  "artifacts": {
+    "model": "C:\\Users\\Admin\\Desktop\\hhh\\Horse\\src\\hw\\rank_model_lightgbm.joblib",
+    "predictions": "C:\\Users\\Admin\\Desktop\\hhh\\Horse\\src\\hw\\rank_model_test_predictions.csv"
+  }
+}
